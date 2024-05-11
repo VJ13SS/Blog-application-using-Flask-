@@ -1,1 +1,6 @@
 # Blog-application-using-Flask-
+
+This is just a simple Blog application created using python flask which do Covers up the basic features for a social media blog application and ofcourse it is also a good coding experience for those who try this out...
+Do check the code and share your insights....
+
+Follow me on LinkedIn --> Viswajith
