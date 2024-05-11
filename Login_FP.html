@@ -1,0 +1,39 @@
+{% extends 'Base_FP.html' %}
+{% block content %}
+<!--Bootstrap Navbar -->
+<div class = 'navbar'>
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/signin">Sign in</a>
+  </li>
+</ul>
+</div>
+<h2>User Login</h2>
+
+<!-- Message Flashing -->
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+  {% for msg in messages %}
+    <h4>{{msg}}</h4>
+  {% endfor %}
+{% endif %}
+{% endwith %}
+
+<!-- Login form -->
+<h3>Create a new account if not exists</h3>
+<h4>Enter details....!</h4>
+
+<div class ='authentication'>
+<form method = 'POST'>
+
+<p><input type = 'text' name = 'name' placeholder = 'Username' /></p>
+
+<p><input type = 'password'name = 'password' placeholder = 'Pasword' /></p>
+
+<p><input type = 'submit' value = 'Submit' id = 'submit_btn'/></p>
+</form>
+<div>
+{% endblock %}
