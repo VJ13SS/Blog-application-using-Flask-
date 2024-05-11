@@ -1,0 +1,272 @@
+*{
+border:border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight:400;
+}
+
+a{
+text-decoration:none;
+color:blue;
+}
+
+textarea{
+width:100%;
+border-radius:10px;
+}
+
+/* navbar*/
+.navbar{
+border:2px solid black;
+display:flex;
+background-color:white;
+}
+
+.nav{
+display:flex;
+background-color:white;
+}
+
+.nav-item{
+padding-right:20px;
+background-color:white;
+}
+
+.nav-link{
+background-color:white;
+padding-right:10px;
+}
+
+/* input */
+input{
+width:90%;
+height:40px;
+font-size:0.85rem;
+background-color:white;
+border-radius:10px;
+margin-left:10px;
+padding:5px;
+}
+
+#submit_btn{
+width:50%;
+background-color:white;
+
+}
+
+/* Authentication */
+.authentication{
+border:2px solid indigo;
+font-size:20px;
+}
+
+
+/* Home page*/
+.userdetails{
+display:flex;
+flex-direction:column;
+margin-top:10px;
+padding:5px;
+font-weight:800;
+border:2px solid blue;
+
+}
+
+.userposts{
+display:flex;
+flex-direction:column;
+padding:5px;
+}
+
+.attributes{
+display:flex;
+padding:5px;
+justify-content:space-between;
+background-color:white;
+}
+
+.username{
+font-size:25px;
+}
+
+.gmail{
+font-size:20px;
+}
+
+.info{
+font-size:15px;
+}
+
+.post{
+font-size:20px;
+font-weight:700;
+}
+
+.date{
+font-weight:400;
+}
+
+/* edit profile */
+.editdetails{
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+padding:10px;
+border:2px solid blue;
+height:250px;
+}
+
+.editdetails input{
+width:50%;
+margin-left:0px;
+margin-bottom:30px;
+height:25px;
+border-radius:0px;
+}
+
+.editdetails button{
+margin-top:5px;
+margin-bottom:0px;
+align-items:center;
+width:80px;
+height:30px;
+background-color:white;
+color:black;
+align-items:center;
+}
+
+.editdetails textarea{
+height:25px;
+border:2px solid black;
+border-radius:0px;
+margin-bottom:30px;
+}
+
+.userposts{
+border:2px solid red;
+}
+
+/*create/edit post */
+.createpost{
+height:300px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+border:2px solid violet;
+}
+
+.createpost input{
+margin:10px 10px;
+}
+
+.createpost textarea{
+width:90%;
+margin:10px;
+font-size:0.85rem;
+border:2px solid red;
+}
+
+#create{
+width:50%;
+border:2px solid green;
+}
+
+
+/* post analytics */
+.userpost{
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+height:500px;
+border:none;
+}
+
+.userpost button{
+background-color:white;
+border:2px solid red;
+align-items:center;
+margin-top:10px;
+height:30px;
+width:80px;
+}
+
+.user_and_post{
+display:flex;
+flex-direction:column;
+justify-content:space-evenly;
+padding:10px;
+border:2px solid black;
+margin: 10px 0px 10px 0px;
+}
+
+.reviews{
+border:2px solid brown;
+margin: 10px 0px 10px 0px;
+}
+
+.reviews i{
+color:red;
+font-size:25px;
+}
+
+.reviews span{
+font-size:17px;
+padding:2px;
+margin:5px;
+}
+
+.reviews a{
+font-size:14px;
+}
+
+.comments{
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+border:none;
+padding:5px;
+margin:5px;
+}
+
+
+.new_comment{
+height:85px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.new_comment textarea{
+width:80%;
+border-radius:3px;
+padding:5px;
+margin:5px;
+border:2px solid orange;
+}
+
+.new_comment button{
+margin:5px;
+border:2px solid orange;
+text-align:center;
+background-color:white;
+}
+
+.userdetails button{
+background-color:white;
+border:2px solid red;
+align-items:center;
+margin-top:10px;
+height:30px;
+width:80px;
+}
+
+.createpost button{
+background-color:white;
+border:2px solid red;
+align-items:center;
+margin:10px;
+height:30px;
+width:80px;
+}
