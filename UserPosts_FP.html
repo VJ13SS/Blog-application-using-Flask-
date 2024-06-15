@@ -26,7 +26,21 @@
 <br>
 <span class = 'info'>Info : {{view_user.info}}</span>
 <br>
-<a href = '/viewposts'><button>Back</button></a>
+{%if profile_viewed == view_user.name %}
+Followers = {{total_followers}}
+{% else %}
+
+{% if Follow == 1 %}
+<a href = '/follow-user/{{view_user.id}}'>UnFollow : <i class="fa-solid fa-bell"></i></a>
+{% else %}
+<a href = '/follow-user/{{view_user.id}}'>Follow : <i class="fa-regular fa-bell"></i></a>
+{% endif %}
+Followers = {{total_followers}}
+
+{% endif %}
+
+<br>
+<a href = '/viewposts'><button id = "back">Back</button></a>
 </div>
 
 <!-- Viewing the user posts -->
@@ -41,7 +55,6 @@
 <br>
 <span class = 'date'>Created At: {{post.created_at}}</span>
 <a href = '/postdetails/{{post.id}}'>Analytics</a>
-
 </div>
 <br>
 {% endfor %}
