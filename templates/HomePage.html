@@ -1,0 +1,26 @@
+{%extends 'BaseFile.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class = "container">
+<div class = "home">
+<h3>Programming is the art of telling another human being what one wants the computer to do. ― Donald Ervin Knuth</h3>
+<form method = "POST">
+<input type = "text" placeholder = "Enter your Name" name = "user-name"/>
+<br>
+<select name = 'languages'>
+<option value = "Python">Choose Your Language</option>
+<option value = "Python">Python</option>
+<option value = "C++">C++</option>
+<option value = "Java">Java</option>
+<option value = "C">C</option>
+</select>
+<br>
+<button>Submit</button>
+</form>
+<div class = "additionals">
+<h3><a href = "https://www.wired.com/tag/programming/">Check Out the Latest Coding News</a></h3>
+<h3><a href = "https://leetcode.com/problemset/">Practise YourSelves on LeetCode</a></h3>
+</div>
+</div>
+</div>
+{%endblock %}

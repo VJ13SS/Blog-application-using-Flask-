@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block title%}LOGIN PAGE {% endblock %}
+{% block content %}
+<!-- to get infotmation via forms we need to use the form tag-->
+<!-- action = $ (takes a url)returns to the same page .... methid == post means we are posting information...if method is get...we are filling the form with the information get from the server-->
+
+<!- to display flash messages (we can have 1 or more flask messages)-->
+{% with messages = get_flashed_messages() %}
+  {% if messages %}<!- if messages is not empty -->
+    {% for msg in messages %}
+      <p> {{msg}} </p>
+    {% endfor %}
+   
+  {% endif %}
+{% endwith %}
+
+
+<form action = '' method = 'POST'>
+<p>Name: </p>
+<!-- the enterd text is in name1(dictionary key) which then  is stored in the name variable -- name1 -->
+<p><input type = 'text' name = 'name1' placeholder = 'Enter name' /></p>
+<p><input type = 'submit'/></p>
+
+
+</form>
+{% endblock%}

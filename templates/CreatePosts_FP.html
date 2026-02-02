@@ -1,0 +1,40 @@
+{% extends 'Base_FP.html' %}
+{% block content %}
+
+<!--Bootstrap Navbar -->
+<div class = 'navbar'>
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="/home">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/viewposts">View posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/createpost">Create posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/logout">Logout</a>
+  </li>
+</ul>
+</div>
+<!-- Message Flashing -->
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for msg in messages %}
+<h3>{{msg}}</h3>
+{% endfor%}
+{% endif %}
+{% endwith %}
+
+<h1>Create your own Blog</h1>
+
+<div class = 'createpost'>
+<a href = '/home'><button id = "back">Back</button></a>
+<form method = 'POST'>
+<textarea name = 'post' rows = '10' cols = '25' placeholder = 'Create post'>{{default}}</textarea>
+<br>
+<input type = 'submit' value = 'Post' id = 'create'/>
+</form>
+</div>
+{% endblock %}

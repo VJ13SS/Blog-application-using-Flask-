@@ -1,0 +1,58 @@
+{% extends 'Base_FP.html' %}
+{% block content %}
+<!--Bootstrap Navbar -->
+<div class = 'navbar'>
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" href="/home">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/viewposts">View posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/createpost">Create posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/logout">Logout</a>
+  </li>
+</ul>
+</div>
+
+<!-- User details -->
+<h1>Welcome {{current_user.name}} </h1>
+<div class = 'userdetails'>
+<span class = 'username'>Name : {{current_user.name}}</span></a>
+<br>
+<span class = 'gmail'>Gmail : {{current_user.email}}</span>
+<br>
+<span class = 'info'>Info : {{current_user.info}}</span>
+<br>
+<span class = 'followers'>Followers : {{total_followers}}</span>
+<br>
+<!-- option to edit profile -->
+<a href ='/editprofile/{{current_user.id}}'>Edit profile</a>
+</div>
+
+<!-- Displaying user posts -->
+<h3>Your Posts appear here....! </h3>
+<br>
+{% for post in display_posts %}
+<!-- to display the posts accessing the post(stored as text in the database) and user name(stored as name inside the user table...since post table is backreferencing the user table...we use post.user.name) -->
+<div class = 'userposts'>
+<span class = 'post'>{{post.text}}</span>
+<br>
+<span class = 'date'>Created At: {{post.created_at}}</span>
+<br>
+<!-- passing the post id as the dynamic variable to delete post route -->
+
+<!-- Post attributes -- Edit,Delete,Analytics -->
+<div class = 'attributes'>
+<a href="/editpost/{{post.id}}">Edit</a>
+<a href = '/postdetails/{{post.id}}'>Analytics</a>
+<a href="/deletepost/{{post.id}}">Delete</a>
+</div>
+
+</div>
+<br>
+{% endfor%}
+{% endblock %}

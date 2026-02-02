@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% block title%}User{% endblock %}
+{% block content %}
+<!- to display flashed messages -->
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for msg in messages %}
+      <p>{{msg}}</p>
+     {% endfor%}
+   {% endif %}
+ {% endwith %}
+ <p>{{user1}} </p>
+{% endblock %}

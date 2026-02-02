@@ -1,0 +1,25 @@
+{% extends 'Base_FP.html' %}
+{% block content %}
+<!--Bootstrap Navbar -->
+<div class = 'navbar'>
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" href="/home">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/viewposts">View posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/createpost">Create posts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/logout">Logout</a>
+  </li>
+</ul>
+</div>
+{% for connection in total_connections %}
+<div class = 'connection'>
+{{connection.following}}
+</div>
+{% endfor %}
+{% endblock %}
